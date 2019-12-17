@@ -1,0 +1,26 @@
+apiVersion: extensions/v1beta1
+kind: Deployment
+metadata:
+  name: ruudniew-soundboard
+  namespace: dutchdelhicacy
+  labels:
+    deployment-name: "ruudniew-soundboard"
+spec:
+  replicas: 1
+  strategy: {}
+  template:
+    metadata:
+      labels:
+        deployment-name: "ruudniew-soundboard"
+    spec:
+      containers:
+        - image: eu.gcr.io/genuine-display-244917/ruudniew-soundboard:master
+          name: ruudniew-soundboard
+          ports:
+          - containerPort: 3200
+          resources: {}
+          imagePullPolicy: Always
+      restartPolicy: Always
+      imagePullSecrets:
+        - name: gcrst
+status: {}

@@ -1,0 +1,23 @@
+{
+  "name": "ruudniew-soundboard",
+  "version": "1.0.0",
+  "description": "Ruudniew&#39;s soundboard",
+  "author": "Ruud",
+  "private": true,
+  "scripts": {
+    "dev": "cross-env NODE_ENV=development nodemon server/index.js --watch server",
+    "build": "nuxt build",
+    "start": "cross-env NODE_ENV=production node server/index.js",
+    "generate": "nuxt generate"
+  },
+  "dependencies": {
+    "nuxt": "^2.0.0",
+    "cross-env": "^5.2.0",
+    "express": "^4.16.4",
+    "@nuxtjs/axios": "^5.3.6"
+  },
+  "devDependencies": {
+    "nodemon": "^1.18.9",
+    "@nuxtjs/tailwindcss": "^1.0.0"
+  }
+}

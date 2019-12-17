@@ -1,0 +1,16 @@
+apiVersion: extensions/v1beta1
+kind: Ingress
+metadata:
+  annotations:
+    kubernetes.io/ingress.class: traefik
+  name: ruudniew-soundboard
+  namespace: dutchdelhicacy
+spec:
+  rules:
+    - host:
+      http:
+        paths:
+          - backend:
+              serviceName: "ruudniew-soundboard"
+              servicePort: 3200
+            path: "/"
