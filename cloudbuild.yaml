@@ -26,14 +26,14 @@ steps:
       - '-f'
       - './k8s/ruudniew-soundboard-deployment.yaml'
       - '--namespace'
-      - 1001factory
+      - dutchdelhicacy
     env:
       - 'CLOUDSDK_COMPUTE_ZONE=europe-west4-a'
       - 'CLOUDSDK_CONTAINER_CLUSTER=factory'
 
   # Namespace, if not default, has to be specified.
   - name: 'gcr.io/cloud-builders/kubectl'
-    args: ['set', 'image', 'deployment/ruudniew-soundboard', 'ruudniew-soundboard=eu.gcr.io/$PROJECT_ID/ruudniew-soundboard:$SHORT_SHA', '--namespace', '1001factory']
+    args: ['set', 'image', 'deployment/ruudniew-soundboard', 'ruudniew-soundboard=eu.gcr.io/$PROJECT_ID/ruudniew-soundboard:$SHORT_SHA', '--namespace', 'dutchdelhicacy']
     env:
       - 'CLOUDSDK_COMPUTE_ZONE=europe-west4-a'
       - 'CLOUDSDK_CONTAINER_CLUSTER=factory'

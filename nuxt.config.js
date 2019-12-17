@@ -58,10 +58,11 @@ module.exports = {
     */
     extend (config, ctx) {
     }
-  },
-
-  server: {
-    host: "localhost",
-    port: "3200"
   }
+  // ,
+  //
+  // server: {
+  //   host: "localhost",
+  //   port: "3200"
+  // }
 }
