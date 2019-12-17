@@ -118,7 +118,7 @@
 
     methods: {
       async playSound (button) {
-       await this.$axios.post('http://localhost:3300/event', {
+       await this.$axios.post('https://soundboard-api.ruudniew.com/event', {
          "title": button.title,
          "internal_title": button['internal_title'],
          "source": {
